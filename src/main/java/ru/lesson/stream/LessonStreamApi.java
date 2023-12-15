@@ -101,10 +101,10 @@ public class LessonStreamApi {
      * Если дубли существуют - вернуть true, если дублей нет - вернуть false
      */
     public boolean task7(List<Employee> employees) {
-        var uniqueNames = new HashSet<String>();
-        return employees.stream()
+        return employees.size() != employees.stream()
                 .map(Employee::getName)
-                .anyMatch(o -> !(uniqueNames.add(o)));
+                .distinct()
+                .count();
     }
 
     /**
