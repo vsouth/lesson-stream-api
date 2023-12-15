@@ -131,7 +131,7 @@ public class LessonStreamApi {
     public Map<Boolean, Long> task9(List<Employee> employees) {
         return employees.stream()
                 .collect(partitioningBy(
-                        x -> x.getRating() > 50,
+                        o -> o.getRating() > 50,
                         counting()
                         )
                 );
