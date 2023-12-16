@@ -40,7 +40,7 @@ public class LessonStreamApi {
      */
     public double task3(List<Employee> employees) {
         return employees.stream()
-                .collect(Collectors.averagingDouble(Employee::getRating));
+                .collect(averagingDouble(Employee::getRating));
     }
 
     /**
